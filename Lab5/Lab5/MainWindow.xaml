@@ -1,0 +1,52 @@
+﻿<Window x:Class="Lab5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="30">
+			</RowDefinition>
+			<RowDefinition Height="60">
+			</RowDefinition>
+			<RowDefinition Height="30">
+			</RowDefinition>
+			<RowDefinition Height="*">
+			</RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*">
+			</ColumnDefinition>
+			<ColumnDefinition Width="*">
+			</ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Label Content="Number 1"></Label>
+		<Label Content="Number 2" Grid.Column="1"></Label>
+		<local:NumberInput x:Name="Number1" Grid.Row="1">
+		</local:NumberInput>
+		<local:NumberInput x:Name="Number2" Grid.Row="1" Grid.Column="1">
+		</local:NumberInput>
+		<Button Content="C A L C U L A T E" Click="Calculate" Grid.Row="2" Grid.ColumnSpan="2"></Button>
+		<ScrollViewer Grid.Row="3" Grid.ColumnSpan="2" HorizontalScrollBarVisibility="Disabled">
+			<StackPanel Name="Numbers">
+				<Label Content="UNION" HorizontalAlignment="Center"></Label>
+				<Label Name="Union" HorizontalAlignment="Center"></Label>
+				<Label Content="COMPARISON" HorizontalAlignment="Center"></Label>
+				<Label Name="Comparison" HorizontalAlignment="Center"></Label>
+				<Label Content="SORTING" HorizontalAlignment="Center"></Label>
+				<Label Name="Sorting" HorizontalAlignment="Center"></Label>
+				<Label Content="SIMPLIFICATION/ADDITION" HorizontalAlignment="Center"></Label>
+				<Label Name="Simplification" HorizontalAlignment="Center"></Label>
+				<Label Content="SUBTRACTION" HorizontalAlignment="Center"></Label>
+				<Label Name="Subtraction" HorizontalAlignment="Center"></Label>
+				<Label Content="MULTIPLICATION" HorizontalAlignment="Center"></Label>
+				<Label Name="Multiplication" HorizontalAlignment="Center"></Label>
+				<Label Content="DIVISION" HorizontalAlignment="Center"></Label>
+				<Label Name="Division" HorizontalAlignment="Center"></Label>
+			</StackPanel>
+		</ScrollViewer>
+	</Grid>
+</Window>

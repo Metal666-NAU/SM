@@ -1,0 +1,45 @@
+﻿<Window x:Class="Lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="30"></RowDefinition>
+			<RowDefinition Height="30"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="30"></RowDefinition>
+			<RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*">
+				</ColumnDefinition>
+				<ColumnDefinition Width="100">
+				</ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			<TextBox Name="JsonPath"></TextBox>
+			<Button Grid.Column="1" Content="Load" Click="ReloadJson">
+			</Button>
+		</Grid>
+		<Label Content="Input:" Grid.Row="1"></Label>
+		<ScrollViewer Grid.Row="2">
+			<Grid Name="InputTable" HorizontalAlignment="Center" VerticalAlignment="Center" ShowGridLines="True">
+			</Grid>
+		</ScrollViewer>
+		<Label Content="Output:" Grid.Row="3"></Label>
+		<ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Grid.Row="4">
+			<Grid Name="OutputTable" HorizontalAlignment="Center" ShowGridLines="True">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="40">
+					</RowDefinition>
+					<RowDefinition Height="40">
+					</RowDefinition>
+				</Grid.RowDefinitions>
+			</Grid>
+		</ScrollViewer>
+	</Grid>
+</Window>
